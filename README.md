@@ -78,7 +78,7 @@ No license in patents is granted.
   mkdir -p catkin_ws/src
   catkin init
   cd src
-  git clone https://github.com/Rooholla-KhorramBakht/scampi_ks_mars_fusion-1.git
+  git clone --recurse-submodules https://github.com/aau-cns/scampi_ks_mars_fusion.git
   ```
 
 - Compile and install the solver
