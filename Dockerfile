@@ -35,5 +35,8 @@ RUN cd /root/catkin_ws/ && source /opt/ros/noetic/setup.bash && catkin build
 
 RUN echo "source /root/scampi_ks_mars_fusion/devel/setup.bash" >> ~/.bashrc
 
-CMD  jupyter notebook -y --no-browser --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+RUN apt-get install wget
+RUN cd /opt/ && wget https://github.com/coder/code-server/releases/download/v4.9.1/code-server_4.9.1_amd64.deb
+RUN dpkg -i /opt/code-server_4.9.1_amd64.deb && rm /opt/code-server_4.9.1_amd64.deb
 
+CMD cd /root/catkin_ws/ && code-server  --auth none /root/catkin_ws/
