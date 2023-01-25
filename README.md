@@ -29,8 +29,22 @@ licensed under the terms of the BSD-2-Clause-License with no commercial use
 allowed, the full terms of which are made available in the `LICENSE` file.
 No license in patents is granted.
 
+## Running Using Docker (Recommended)
 
-## Prerequisites
+The easiest way to test our code is to use the docker image we have created. Simply clone the repository and build the docker image:
+
+```bash
+git clone --recurse-submodules https://github.com/aau-cns/scampi_ks_mars_fusion.git
+cd scampi_ks_mars_fusion
+./docker_build
+./docker_start
+```
+The last script above starts the docker container and runs a vscode server that can be accessed through your browser at localhost:8080. Editing our codes and running our notebooks can then be easily carried out through this web-hosted IDE. 
+
+### Testing the Solver In Python
+In the opened vscode server navigate to `src/scampi_ks_mars_fusion/solver/notebooks`. There are two notebooks that run the solver on simulated and real data. Here, we are interested in testing the solver on the real dataset so open the `example-real-data.ipynb` notebook and follow along the instruction!
+
+## Building From Source 
 - For the C++ solver and the ROS nodes
   - Install ROS as shown [here](http://wiki.ros.org/noetic/Installation/Ubuntu). We tried ROS1 noetic and also melodic on Ubuntu 18.04 and Ubuntu 20
 
