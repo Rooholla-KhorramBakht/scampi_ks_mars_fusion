@@ -42,7 +42,7 @@ cd scampi_ks_mars_fusion
 The last script above starts the docker container and runs a vscode server that can be accessed through your browser at localhost:8080. Editing our codes and running our notebooks can then be easily carried out through this web-hosted IDE. 
 
 ### Testing the Solver In Python
-In the opened vscode server navigate to `src/scampi_ks_mars_fusion/solver/notebooks`. There are two notebooks that run the solver on simulated and real data. Here, we are interested in testing the solver on the real dataset so open the `example-real-data.ipynb` notebook and follow along the instruction!
+In the opened vscode server navigate to `catkin_ws/src/scampi_ks_mars_fusion/solver/notebooks`. There are two notebooks that run the solver on simulated and real data. Here, we are interested in testing the solver on the real dataset so open the `example-real-data.ipynb` notebook and follow along the instruction!
 
 ## Building From Source 
 - For the C++ solver and the ROS nodes
