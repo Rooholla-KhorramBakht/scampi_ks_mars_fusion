@@ -2,8 +2,8 @@ FROM ros:noetic
 SHELL ["/bin/bash", "-c"]
 
 # Install required packages
-RUN apt-get update && apt-get install -y cmake build-essential python3-pip libgtest-dev git ros-noetic-tf2-*
-RUN python3 -m pip install pyquaternion numpy==1.19 pyyaml catkin_pkg rospkg jupyter catkin_tools matplotlib scipy git
+RUN apt-get update && apt-get install -y cmake build-essential python3-pip libgtest-dev git ros-noetic-tf2-* git
+RUN python3 -m pip install pyquaternion numpy==1.19 pyyaml catkin_pkg rospkg jupyter catkin_tools matplotlib scipy
 RUN cd /root && git clone https://github.com/utiasSTARS/liegroups.git && cd liegroups && python3 -m pip install . && cd .. && rm -r liegroups
 
 # Compile and Install Ceres
