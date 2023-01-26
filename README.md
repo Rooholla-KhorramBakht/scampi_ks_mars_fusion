@@ -34,7 +34,7 @@ No license in patents is granted.
 The easiest way to test our code is to use the docker image we have created. Simply clone the repository and build the docker image:
 
 ```bash
-git clone --recurse-submodules https://github.com/aau-cns/scampi_ks_mars_fusion.git
+git clone --recurse-submodules git@github.com:Rooholla-KhorramBakht/scampi_ks_mars_fusion.git
 cd scampi_ks_mars_fusion
 ./docker_build
 ./docker_start
